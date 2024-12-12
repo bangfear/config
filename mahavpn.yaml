@@ -7,8 +7,8 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 30
   Akun_Singapura:
-    type: file
-    path: "./Akun_Singapura.yaml"
+    type: http
+    url: "https://raw.githubusercontent.com/bangfear/config/main/Akun_Singapura.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
