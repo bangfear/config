@@ -271,6 +271,7 @@ mode: rule
 log-level: silent
 allow-lan: true
 external-controller: 0.0.0.0:9090
+external-ui: /sdcard/dashboard
 secret: ""
 bind-address: "*"
 unified-delay: true
