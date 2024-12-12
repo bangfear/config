@@ -17,7 +17,7 @@ proxy-providers:
       interval: 30
   AKUNCF:
     type: http
-    url: "http://fool.azurewebsites.net/get?format=raw&cdn=104.18.2.2&sni=google.com&mode=cdn,sni&region=ID,SG&vpn=vmess,vless,trojan&pass=ocBk6K7m"
+    url: "http://fool.azurewebsites.net/get?format=clash&cdn=104.18.2.2&sni=google.com&mode=cdn,sni&region=ID,SG&vpn=vmess,vless,trojan&pass=ocBk6K7m"
     interval: 30
     path: "./Akunsub.yaml"
     health-check:
