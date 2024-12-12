@@ -1,0 +1,18 @@
+proxies:
+#All Format Akun Clash Silahkan Akses Link Berikut: https://github.com/GboyGud/FORMAT_AKUN_CLASH
+#Ada Pertanyaan Seputar Config? Silahkan Hubungi: https://t.me/AfthonPc
+#Mulai Baris Ini Kebawah Isi Dengan Akun Anda Sendiri
+
+- name: VIP-SG-MahaVPN
+  server: BUGMU
+  port: 443
+  type: trojan
+  password: PASSWORD
+  network: ws
+  sni: HOSTMU
+  skip-cert-verify: true
+  udp: true
+  ws-opts:
+    path: /PATH
+    headers:
+        Host: HOSTMU
