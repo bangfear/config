@@ -271,7 +271,7 @@ mode: rule
 log-level: silent
 allow-lan: true
 external-controller: 0.0.0.0:9090
-external-ui: xd
+#external-ui: xd
 external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
 secret: ""
 bind-address: "*"
