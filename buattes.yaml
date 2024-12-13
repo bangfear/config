@@ -310,7 +310,7 @@ dns:
     - 1.1.1.1
     - 8.8.8.8
     - 112.215.203.254
-rules:
+#rules:
 - DST-PORT,7895,REJECT
 - DST-PORT,7892,REJECT
 - DST-PORT,7895,REJECT
@@ -343,7 +343,7 @@ rules:
 - RULE-SET,Rule_Sosmed,SOSMED (FB-IG-etc)
 - RULE-SET,Rule_Sosmed2,SOSMED (FB-IG-etc)
 - MATCH,GLOBAL
-rule-providers:
+#rule-providers:
   Reject:
     type: http
     behavior: classical
