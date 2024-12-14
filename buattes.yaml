@@ -176,6 +176,6 @@ rule-providers:
     path: ./geosite.dat
     interval: 86400
 rules:
-  - GEO-SITE,category-ads-all,ADS-BLOCK
+  - GEOSITE,category-ads-all,ADS-BLOCK
   - MATCH,GLOBAL
 
