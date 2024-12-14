@@ -168,4 +168,14 @@ dns:
     - 1.1.1.1
     - 8.8.8.8
     - 112.215.203.254
-rules:  
+rule-providers:
+  geosite:
+    type: http
+    behavior: domain
+    url: https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
+    path: ./geosite.dat
+    interval: 86400
+rules:
+  - GEO-SITE,category-ads-all,ADS-BLOCK
+  - MATCH,GLOBAL
+
