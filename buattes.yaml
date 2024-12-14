@@ -173,7 +173,7 @@ rule-providers:
     type: http
     behavior: domain
     path: "./adblock.yaml"
-    url: https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/master/Filters/filter_1.txt
+    url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
     interval: 86400
 rules:
 - RULE-SET,Rule_Adblock,ADS-BLOCK
