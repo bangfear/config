@@ -168,3 +168,10 @@ dns:
     - 1.1.1.1
     - 8.8.8.8
     - 112.215.203.254
+rule-providers:
+  Rule_Adblock:
+    type: http
+    behavior: domain
+    path: "./adblock.yaml"
+    url: https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/master/Filters/filter_1.txt
+    interval: 86400
