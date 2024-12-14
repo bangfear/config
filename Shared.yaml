@@ -140,7 +140,7 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7895
 ipv6: false
-mode: rule
+mode: global
 log-level: silent
 allow-lan: true
 external-controller: 0.0.0.0:9090
@@ -168,7 +168,7 @@ dns:
     - 1.1.1.1
     - 8.8.8.8
     - 112.215.203.254
-rule-providers:
+#rule-providers:
   #Rule_Adblock:
     #type: http
     #behavior: domain
@@ -181,14 +181,14 @@ rule-providers:
   #url: https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
   #path: ./geosite.dat
   #interval: 86400
-geosite2:
-  type: http
-  behavior: domain
-  url: https://github.com/twnesss/domain-list/raw/release/geosite.dat
-  path: ./geosite.dat
-  interval: 86400
+#geosite2:
+  #type: http
+  #behavior: domain
+  #url: https://github.com/twnesss/domain-list/raw/release/geosite.dat
+  #path: ./geosite.dat
+  #interval: 86400
 
-rules:
+#rules:
 #- RULE-SET,Rule_Adblock,REJECT
-- GEOSITE,category-ads-all,ADS-BLOCK
-- MATCH,GLOBAL
+#- GEOSITE,category-ads-all,ADS-BLOCK
+#- MATCH,GLOBAL
