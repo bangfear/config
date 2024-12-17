@@ -93,6 +93,15 @@ proxy-groups:
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
   lazy: true
+- name: FB-All-Server
+  type: fallback
+  disable-udp: false
+  use:
+  - Akun_Indonesia
+  - Akun_Singapura
+  url: https://cp.cloudflare.com/generate_204
+  interval: '30'
+  lazy: true
 - name: Selector
   type: select
   disable-udp: false
