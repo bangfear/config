@@ -150,7 +150,7 @@ dns:
 rule-providers:
   geosite:
     type: http
-    behavior: domain
+    behavior: classical
     url: https://github.com/malikshi/v2ray-rules-dat/releases/latest/download/geosite.dat
     path: ./geosite.dat
     interval: 86400
