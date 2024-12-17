@@ -160,14 +160,14 @@ dns:
   #url: https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
   #path: ./geosite.dat
   #interval: 86400
-#geosite2:
-  #type: http
-  #behavior: domain
-  #url: https://github.com/twnesss/domain-list/raw/release/geosite.dat
-  #path: ./geosite.dat
-  #interval: 86400
+geosite2:
+  type: http
+  behavior: domain
+  url: https://github.com/twnesss/domain-list/raw/release/geosite.dat
+  path: ./geosite.dat
+  interval: 86400
 
-#rules:
+rules:
 #- RULE-SET,Rule_Adblock,REJECT
-#- GEOSITE,category-ads-all,ADS-BLOCK
-#- MATCH,GLOBAL
+- GEOSITE,category-ads-all,ADS-BLOCK
+- MATCH,GLOBAL
