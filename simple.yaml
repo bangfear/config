@@ -147,7 +147,7 @@ dns:
     '+.arpa': '10.0.0.1'
     '+.googlesyndication.com': '1.1.1.1'
     'geosite:rule-malicious': rcode://success
-#rule-providers:
+rule-providers:
   #Rule_Adblock:
     #type: http
     #behavior: domain
@@ -166,7 +166,7 @@ dns:
   #url: https://github.com/twnesss/domain-list/raw/release/geosite.dat
   #path: ./geosite.dat
   #interval: 86400
-geosite3:
+geosite:
   type: http
   behavior: domain
   url: https://github.com/malikshi/v2ray-rules-dat/releases/latest/download/geosite.dat
