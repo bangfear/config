@@ -1,7 +1,7 @@
 proxy-providers:
   Akun_Indonesia:
     type: http
-    url: "https://raw.githubusercontent.com/bangfear/config/main/Akun_Indonesia.yaml"
+    url: "https://fool.azurewebsites.net/get?format=raw&cdn=104.22.5.240&sni=quiz.staging.vidio.com&mode=cdn,sni&cc=ID&network=ws&vpn=vmess,vless,trojan&pass=ocBk6K7m"
     path: "./Akun_Indonesia.yaml"
     health-check:
       enable: true
@@ -9,7 +9,7 @@ proxy-providers:
       interval: 30
   Akun_Singapura:
     type: http
-    url: "https://raw.githubusercontent.com/bangfear/config/main/Akun_Singapura.yaml"
+    url: "https://fool.azurewebsites.net/get?format=raw&cdn=104.22.5.240&sni=quiz.staging.vidio.com&mode=cdn,sni&cc=SG&network=ws&vpn=vmess,vless,trojan&pass=ocBk6K7m"
     path: "./Akun_Singapura.yaml"
     health-check:
       enable: true
