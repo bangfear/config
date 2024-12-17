@@ -15,14 +15,14 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 30
-  AKUNCF:
-    type: http
-    url: "https://fool.azurewebsites.net/get?format=raw&cdn=104.22.5.240&sni=quiz.staging.vidio.com&mode=cdn,sni&cc=ID,SG&network=ws&vpn=vmess,vless,trojan&pass=ocBk6K7m"
-    path: "./Akunsub.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 60
+  #AKUNCF:
+   # type: http
+    #url: "https://fool.azurewebsites.net/get?format=raw&cdn=104.22.5.240&sni=quiz.staging.vidio.com&mode=cdn,sni&cc=ID,SG&network=ws&vpn=vmess,vless,trojan&pass=ocBk6K7m"
+    #path: "./Akunsub.yaml"
+#    health-check:
+ #     enable: true
+  #    url: http://www.gstatic.com/generate_204
+   #   interval: 60
 proxy-groups:
 - name: UNIVERSAL
   type: select
@@ -42,12 +42,9 @@ proxy-groups:
   - DIRECT
   - REJECT
   - ID-Url-Test
-  - ID-LBalance
   - ID-Fallback
   - SG-Url-Test
-  - SG-LBalance
   - SG-Fallback
-  - LB-All-Server
   - Selector    
 - name: ADULT 18++
   type: select
@@ -56,30 +53,29 @@ proxy-groups:
   - DIRECT
   - REJECT
   - ID-Url-Test
-  - ID-LBalance
   - ID-Fallback
   - SG-Url-Test
-  - SG-LBalance
   - SG-Fallback
-  - LB-All-Server
   - Selector    
 - name: ID-Url-Test
   type: url-test
   disable-udp: false
   use:
   - Akun_Indonesia
-  - AKUNCF
+ # - AKUNCF
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
   tolerance: '30'
+  lazy: true
 - name: ID-Fallback
   type: fallback
   disable-udp: false
   use:
-  - AKUNCF
+  #- AKUNCF
   - Akun_Indonesia
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
+  lazy: true
 - name: SG-Url-Test
   type: url-test
   disable-udp: false
@@ -88,6 +84,7 @@ proxy-groups:
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
   tolerance: '30'
+  lazt: true
 - name: SG-Fallback
   type: fallback
   disable-udp: false
@@ -95,13 +92,14 @@ proxy-groups:
   - Akun_Singapura
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
+  lazy: true
 - name: Selector
   type: select
   disable-udp: false
   use:
   - Akun_Indonesia
   - Akun_Singapura
-  - AKUNCF
+  #- AKUNCF
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
 port: 7890
@@ -129,15 +127,26 @@ dns:
   nameserver:
     - 1.1.1.1
     - 8.8.8.8
+    - https://dns.cloudflare.com/dns-query
   fallback:
     - 1.0.0.1
-    - https://dns.cloudflare.com/dns-query
+    - 8.8.4.4
     - https://dns.google/dns-query
     - 112.215.203.254
   default-nameserver:
     - 1.1.1.1
     - 8.8.8.8
+    - 1.0.0.1
+    - 8.8.4.4
     - 112.215.203.254
+  proxy-server-nameserver:
+    - 112.215.203.254
+    - 112.215.198.248
+    - 192.168.157.30
+  nameserver-policy:
+    '+.arpa': '10.0.0.1'
+    '+.googlesyndication.com': '1.1.1.1'
+    'geosite:rule-malicious': rcode://success
 #rule-providers:
   #Rule_Adblock:
     #type: http
