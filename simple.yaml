@@ -154,12 +154,12 @@ dns:
     #path: "./adblock.yaml"
     #url: https://raw.githubusercontent.com/GboyGud/clash_for_android/main/v3/rule_provider/adblock.yaml
     #interval: 86400
-#geosite:
-  #type: http
-  #behavior: domain
-  #url: https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
-  #path: ./geosite.dat
-  #interval: 86400
+geosite:
+  type: http
+  behavior: domain
+  url: https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
+  path: ./geosite.dat
+  interval: 86400
 geosite2:
   type: http
   behavior: domain
