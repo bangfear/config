@@ -29,12 +29,9 @@ proxy-groups:
   disable-udp: false
   proxies:
   - ID-Url-Test
-  - ID-LBalance
   - ID-Fallback
   - SG-Url-Test
-  - SG-LBalance
   - SG-Fallback
-  - LB-All-Server
   - Selector
   url: http://www.gstatic.com/generate_204
   interval: '10'
@@ -75,15 +72,6 @@ proxy-groups:
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
   tolerance: '30'
-- name: ID-LBalance
-  type: load-balance
-  strategy: round-robin
-  disable-udp: false
-  use:
-  - Akun_Indonesia
-  - AKUNCF
-  url: https://cp.cloudflare.com/generate_204
-  interval: '30'
 - name: ID-Fallback
   type: fallback
   disable-udp: false
@@ -100,29 +88,11 @@ proxy-groups:
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
   tolerance: '30'
-- name: SG-LBalance
-  type: load-balance
-  strategy: round-robin
-  disable-udp: false
-  use:
-  - Akun_Singapura
-  url: https://cp.cloudflare.com/generate_204
-  interval: '30'
 - name: SG-Fallback
   type: fallback
   disable-udp: false
   use:
   - Akun_Singapura
-  url: https://cp.cloudflare.com/generate_204
-  interval: '30'
-- name: LB-All-Server
-  type: load-balance
-  strategy: round-robin
-  disable-udp: false
-  use:
-  - Akun_Indonesia
-  - Akun_Singapura
-  - AKUNCF
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
 - name: Selector
