@@ -148,6 +148,12 @@ dns:
     '+.googlesyndication.com': '1.1.1.1'
     'geosite:rule-malicious': rcode://success
 rule-providers:
+  geosite:
+    type: http
+    behavior: domain
+    url: https://github.com/malikshi/v2ray-rules-dat/releases/latest/download/geosite.dat
+    path: ./geosite.dat
+    interval: 86400
   #Rule_Adblock:
     #type: http
     #behavior: domain
@@ -165,15 +171,7 @@ rule-providers:
   #behavior: domain
   #url: https://github.com/twnesss/domain-list/raw/release/geosite.dat
   #path: ./geosite.dat
-  #interval: 86400
- geosite:
-   type: http
-   behavior: domain
-   url: https://github.com/malikshi/v2ray-rules-dat/releases/latest/download/geosite.dat
-   path: ./geosite.dat
-   interval: 86400  
-  
-
+  #interval: 86400  
 rules:
 #- RULE-SET,Rule_Adblock,REJECT
 - GEOSITE,category-ads-all,ADS-BLOCK
